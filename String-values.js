@@ -30,3 +30,5 @@ function itemValue(item){
 function wordValue(a){
   return a.map((el, index) => itemValue(el) * (index + 1) )
 }
+
+// or
