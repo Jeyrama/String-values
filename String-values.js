@@ -19,3 +19,14 @@ Input will only contain lowercase characters and spaces.
 
 
 // Solution
+
+function itemValue(item){
+  return item.replace(/ /g, '')
+             .split('')
+             .map((item) => item.charCodeAt(0) - 96)
+             .reduce((a,b) => a + b, 0)
+}
+
+function wordValue(a){
+  return a.map((el, index) => itemValue(el) * (index + 1) )
+}
