@@ -32,3 +32,25 @@ function wordValue(a){
 }
 
 // or
+
+function wordValue(a) {
+  const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+  let multiplier = 1
+  let totalValue = 0
+  let arrayOfNums = []
+  for (let i=0; i< a.length; i++){
+    
+   for (let k = 0; k<a[i].length; k++){
+     let currentLetter = a[i][k]
+    if (currentLetter === " "){
+
+    } else {
+    totalValue += alphabet.indexOf(currentLetter) + 1 
+    }
+   }
+    arrayOfNums.push(multiplier * totalValue)
+    multiplier += 1
+    totalValue = 0
+  }
+  return arrayOfNums;
+}
